@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Tanishq Stationery | Digital Visiting Card | Thane West</title>
+
+    <!-- Meta SEO & Open Graph -->
+    <meta name="description"
+        content="Tanishq Stationery - Stationery & Gift Articles in Thane West, Maharashtra. Call, WhatsApp, save contact, and explore products instantly.">
+    <meta name="keywords"
+        content="Tanishq Stationery, Stationery Thane West, Gift Articles Thane, School Supplies Thane, Office Stationery Thane">
+    <meta name="theme-color" content="#F7F5F0">
+
+    <!-- Open Graph Sharing -->
+    <meta property="og:title" content="Tanishq Stationery | Digital Visiting Card">
+    <meta property="og:description"
+        content="Stationery & Gift Articles in Thane West, Maharashtra. Call +91 9819978173 or WhatsApp us instantly.">
+    <meta property="og:image" content="assets/images/hero/storefront.jpg">
+    <meta property="og:type" content="website">
+
+    <!-- Strict Typography System: Playfair Display (Brand) & DM Sans (Everything else) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Ambient Canvas Background -->
+    <canvas id="ambient-canvas"></canvas>
+
+    <!-- Main Mobile Digital Card Container -->
+    <main class="card-container" id="app-container">
+
+        <!-- TOP NAVIGATION HEADER -->
+        <header class="card-header">
+            <div class="status-pill" id="business-status-pill">
+                <span class="status-dot pulsating"></span>
+                <span class="status-text" id="business-status-text">OPEN NOW</span>
+            </div>
+
+            <div class="header-actions">
+                <!-- LIGHT / DARK MODE TOGGLE BUTTON -->
+                <button class="icon-btn theme-toggle-btn" id="theme-toggle-btn" aria-label="Toggle Light/Dark Theme"
+                    title="Toggle Theme">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+
+                <button class="icon-btn" id="top-share-btn" aria-label="Share Card" title="Share Digital Card">
+                    <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="18" cy="5" r="3"></circle>
+                        <circle cx="6" cy="12" r="3"></circle>
+                        <circle cx="18" cy="19" r="3"></circle>
+                        <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                        <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                    </svg>
+                </button>
+            </div>
+        </header>
+
+        <!-- HERO BUSINESS CARD SECTION -->
+        <section class="hero-section" id="hero-section">
+            <div class="hero-3d-card" id="hero-3d-card">
+                <!-- Hero Cover Image -->
+                <div class="hero-cover">
+                    <img src="assets/images/hero/storefront.jpg" alt="Tanishq Stationery Storefront in Thane West"
+                        class="hero-cover-img" id="hero-cover-img">
+                    <div class="hero-cover-overlay"></div>
+                </div>
+
+                <!-- Hero Content Body -->
+                <div class="hero-body">
+                    <!-- Brand Avatar Logo -->
+                    <div class="logo-wrapper">
+                        <img src="assets/logo/logo.png" alt="Tanishq Stationery Logo" class="brand-logo"
+                            id="brand-logo">
+                        <span class="verified-badge" title="Verified Local Business">
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                            </svg>
+                        </span>
+                    </div>
+
+                    <!-- Business Identity Titles -->
+                    <div class="brand-identity">
+                        <h1 class="brand-name" id="brand-name">Tanishq Stationery</h1>
+                        <p class="brand-tagline" id="brand-tagline">Stationery & Gift Articles</p>
+
+                        <div class="location-badge">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <span id="brand-location">Thane West, Maharashtra</span>
+                        </div>
+
+                        <p class="brand-bio" id="brand-bio">
+                            Your local destination for stationery, school supplies, office essentials, art materials and
+                            gift articles.
+                        </p>
+                    </div>
+
+                    <!-- PRIMARY QUICK ACTION BUTTONS -->
+                    <div class="primary-actions-grid">
+                        <a href="tel:+919819978173" id="action-call" class="action-btn call-btn">
+                            <div class="btn-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.2">
+                                    <path
+                                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="btn-text">
+                                <span class="btn-label">CALL</span>
+                                <span class="btn-subtext">+91 9819978173</span>
+                            </div>
+                        </a>
+
+                        <a href="https://wa.me/919819978173" id="action-whatsapp" target="_blank" rel="noopener"
+                            class="action-btn whatsapp-btn">
+                            <div class="btn-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.2">
+                                    <path
+                                        d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="btn-text">
+                                <span class="btn-label">WHATSAPP</span>
+                                <span class="btn-subtext">Instant Chat</span>
+                            </div>
+                        </a>
+
+                        <button id="action-save-vcf" class="action-btn save-btn">
+                            <div class="btn-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.2">
+                                    <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+                                    <polyline points="17 21 17 13 7 13 7 21"></polyline>
+                                    <polyline points="7 3 7 8 15 8"></polyline>
+                                </svg>
+                            </div>
+                            <div class="btn-text">
+                                <span class="btn-label">+ SAVE CONTACT</span>
+                                <span class="btn-subtext">Download vCard</span>
+                            </div>
+                        </button>
+
+                        <button id="action-share" class="action-btn share-btn">
+                            <div class="btn-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.2">
+                                    <circle cx="18" cy="5" r="3"></circle>
+                                    <circle cx="6" cy="12" r="3"></circle>
+                                    <circle cx="18" cy="19" r="3"></circle>
+                                    <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                                    <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                                </svg>
+                            </div>
+                            <div class="btn-text">
+                                <span class="btn-label">↗ SHARE CARD</span>
+                                <span class="btn-subtext">Send Profile</span>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- HIGHLIGHT METRICS STRIP -->
+        <section class="highlights-strip reveal">
+            <div class="highlight-item">
+                <span class="highlight-number">1000+</span>
+                <span class="highlight-label">Products</span>
+            </div>
+            <div class="highlight-divider"></div>
+            <div class="highlight-item">
+                <span class="highlight-number">100%</span>
+                <span class="highlight-label">Quality Assured</span>
+            </div>
+            <div class="highlight-divider"></div>
+            <div class="highlight-item">
+                <span class="highlight-number">Thane W.</span>
+                <span class="highlight-label">Prime Location</span>
+            </div>
+        </section>
+
+        <!-- EXPLORE PRODUCTS PROMINENT CTA BANNER -->
+        <section class="explore-banner-section reveal">
+            <a href="#products-section" class="explore-banner-card" id="explore-banner-btn">
+                <div class="explore-banner-content">
+                    <div class="explore-icon-glow">
+                        <span class="explore-emoji">🛍️</span>
+                    </div>
+                    <div class="explore-text-group">
+                        <h2 class="explore-title">EXPLORE PRODUCTS</h2>
+                        <p class="explore-subtitle">Browse stationery, school supplies, art materials, notebooks & gift
+                            articles.</p>
+                    </div>
+                </div>
+                <div class="explore-arrow-btn">
+                    <span>VIEW PRODUCTS</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                </div>
+            </a>
+        </section>
+
+        <!-- PRODUCT CATEGORIES GRID SECTION -->
+        <section class="section categories-section reveal" id="categories-section">
+            <div class="section-header">
+                <span class="section-tag">CATALOGUE</span>
+                <h2 class="section-title">PRODUCT CATEGORIES</h2>
+                <p class="section-desc">Explore our wide selection of store items.</p>
+            </div>
+
+            <div class="category-grid" id="category-grid">
+                <!-- Dynamically Rendered Category Cards -->
+            </div>
+        </section>
+
+        <!-- PRODUCT SHOWCASE SECTION WITH FILTER TABS -->
+        <section class="section products-section reveal" id="products-section">
+            <div class="section-header">
+                <span class="section-tag">FEATURED ITEMS</span>
+                <h2 class="section-title">OUR PRODUCTS</h2>
+                <p class="section-desc">Everything you need, all in one place.</p>
+            </div>
+
+            <!-- Horizontal Category Filter Bar -->
+            <div class="category-tabs-container">
+                <div class="category-tabs" id="category-tabs">
+                    <!-- Dynamic Filter Chips -->
+                </div>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="products-grid" id="products-grid">
+                <!-- Dynamic Product Cards -->
+            </div>
+        </section>
+
+        <!-- STORE PHOTO GALLERY & LIGHTBOX SECTION -->
+        <section class="section gallery-section reveal" id="gallery-section">
+            <div class="section-header">
+                <span class="section-tag">STORE AMBIANCE</span>
+                <h2 class="section-title">REAL STORE & DISPLAY</h2>
+                <p class="section-desc">Visit our shop in Thane West to experience our full range.</p>
+            </div>
+
+            <div class="gallery-grid" id="gallery-grid">
+                <!-- Dynamically Rendered Gallery Grid -->
+            </div>
+        </section>
+
+        <!-- ABOUT TANISHQ STATIONERY SECTION -->
+        <section class="section about-section reveal" id="about-section">
+            <div class="about-card">
+                <div class="section-header left-aligned">
+                    <span class="section-tag">OUR STORY</span>
+                    <h2 class="section-title">ABOUT TANISHQ STATIONERY</h2>
+                </div>
+
+                <div class="about-content">
+                    <p>
+                        Located in the heart of Thane West, <strong>Tanishq Stationery</strong> is a trusted local
+                        neighborhood store offering a comprehensive range of high-quality stationery, school essentials,
+                        executive writing pens, art & craft supplies, and customized gift articles.
+                    </p>
+                    <p>
+                        We pride ourselves on providing friendly customer service, authentic products from leading
+                        Indian and international brands, and convenient print & binding services under one roof.
+                    </p>
+
+                    <div class="store-features-list">
+                        <div class="feature-chip">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Authentic Brands</span>
+                        </div>
+                        <div class="feature-chip">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>School & College Packs</span>
+                        </div>
+                        <div class="feature-chip">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Gift Wrapping & Hampers</span>
+                        </div>
+                        <div class="feature-chip">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Print & Lamination</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BUSINESS INFORMATION SECTION -->
+        <section class="section info-section reveal" id="info-section">
+            <div class="section-header">
+                <span class="section-tag">CONTACT INFO</span>
+                <h2 class="section-title">STORE INFORMATION</h2>
+                <p class="section-desc">Reach out or visit us in person.</p>
+            </div>
+
+            <div class="info-cards-grid">
+                <!-- Phone & WhatsApp Card -->
+                <div class="info-card">
+                    <div class="info-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="info-details">
+                        <h4>Phone & WhatsApp</h4>
+                        <p class="phone-link"><a href="tel:+919819978173">+91 9819978173</a></p>
+                        <p class="muted-note">Direct Call & WhatsApp Order Line</p>
+                    </div>
+                </div>
+
+                <!-- Operating Hours Card -->
+                <div class="info-card">
+                    <div class="info-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                    </div>
+                    <div class="info-details">
+                        <h4>Opening Hours</h4>
+                        <p id="info-hours">Monday - Sunday: 10:00 AM - 9:30 PM</p>
+                        <p class="muted-note">Open 7 days a week</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXACT FULL ADDRESS & LOCATION DIRECTIONS SECTION -->
+        <section class="section location-section reveal" id="location-section">
+            <div class="address-card">
+                <div class="address-header">
+                    <div class="address-pin-icon">📍</div>
+                    <div class="address-header-text">
+                        <h3>STORE LOCATION</h3>
+                        <p>Visit us at our shop in Thane West</p>
+                    </div>
+                </div>
+
+                <!-- EXACT FULL UNMODIFIED ADDRESS -->
+                <div class="formatted-address-block">
+                    <p class="addr-line bold-addr">Krishna Tower, Shop No.7,</p>
+                    <p class="addr-line">nilkanth darsan building,</p>
+                    <p class="addr-line">Runwal Nagar Rd,</p>
+                    <p class="addr-line">opp. Olive prime,</p>
+                    <p class="addr-line">near citydairy,</p>
+                    <p class="addr-line">Kolbad, Runwal Nagar,</p>
+                    <p class="addr-line">Thane West, Thane,</p>
+                    <p class="addr-line bold-addr">Maharashtra 400601</p>
+                </div>
+
+                <div class="address-cta-wrapper">
+                    <a href="https://maps.google.com/?q=Tanishq+Nx+Stationery+Runwal+Nagar+Thane+West"
+                        id="address-directions-btn" target="_blank" rel="noopener" class="directions-btn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        <span>📍 GET DIRECTIONS</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- DYNAMIC QR CODE SECTION -->
+        <section class="section qr-section reveal" id="qr-section">
+            <div class="qr-card">
+                <div class="section-header">
+                    <span class="section-tag">INSTANT SHARE</span>
+                    <h2 class="section-title">SCAN & SAVE CARD</h2>
+                    <p class="section-desc">Scan this QR code with your mobile camera to open this digital card on any
+                        phone.</p>
+                </div>
+
+                <!-- QR Display Frame -->
+                <div class="qr-frame-wrapper">
+                    <div class="qr-canvas-container" id="qr-canvas-container">
+                        <canvas id="qr-canvas" width="220" height="220"></canvas>
+                        <div class="qr-center-logo">
+                            <img src="assets/logo/logo.png" alt="Tanishq Logo">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- QR Actions -->
+                <div class="qr-actions">
+                    <button id="qr-download-btn" class="secondary-btn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                        <span>DOWNLOAD QR</span>
+                    </button>
+
+                    <button id="qr-share-btn" class="secondary-btn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="18" cy="5" r="3"></circle>
+                            <circle cx="6" cy="12" r="3"></circle>
+                            <circle cx="18" cy="19" r="3"></circle>
+                            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                            <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                        </svg>
+                        <span>SHARE CARD</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOCIAL LINKS SECTION -->
+        <section class="section social-section reveal" id="social-section">
+            <div class="section-header">
+                <span class="section-tag">CONNECT</span>
+                <h2 class="section-title">CONNECT WITH US</h2>
+            </div>
+
+            <div class="social-links-grid">
+                <a href="https://wa.me/919819978173" id="social-wa" class="social-card" target="_blank" rel="noopener">
+                    <div class="social-icon wa">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="social-meta">
+                        <span class="social-name">WhatsApp</span>
+                        <span class="social-status">+91 9819978173</span>
+                    </div>
+                </a>
+
+                <a href="#" id="social-instagram" class="social-card" target="_blank" rel="noopener">
+                    <div class="social-icon insta">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </div>
+                    <div class="social-meta">
+                        <span class="social-name">Instagram</span>
+                        <span class="social-status">Follow Us</span>
+                    </div>
+                </a>
+
+                <a href="#" id="social-facebook" class="social-card" target="_blank" rel="noopener">
+                    <div class="social-icon fb">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                        </svg>
+                    </div>
+                    <div class="social-meta">
+                        <span class="social-name">Facebook</span>
+                        <span class="social-status">Like Page</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="card-footer">
+            <h3 class="footer-title">Tanishq Stationery</h3>
+            <p class="footer-tagline">Stationery & Gift Articles</p>
+
+            <div class="footer-address-block">
+                <p>Krishna Tower, Shop No.7, nilkanth darsan building,</p>
+                <p>Runwal Nagar Rd, opp. Olive prime, near citydairy,</p>
+                <p>Kolbad, Runwal Nagar, Thane West, Thane, Maharashtra 400601</p>
+                <p class="footer-phone">📞 <a href="tel:+919819978173">+91 9819978173</a></p>
+            </div>
+
+            <div class="footer-demo-notice">
+                <span>DIGITAL VISITING CARD</span>
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- STICKY MOBILE BOTTOM ACTION BAR -->
+    <nav class="sticky-bottom-bar" id="bottom-bar">
+        <a href="tel:+919819978173" id="bar-call" class="bar-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                </path>
+            </svg>
+            <span>Call</span>
+        </a>
+
+        <a href="https://wa.me/919819978173" id="bar-whatsapp" class="bar-item highlight" target="_blank"
+            rel="noopener">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                    d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+                </path>
+            </svg>
+            <span>WhatsApp</span>
+        </a>
+
+        <button id="bar-save" class="bar-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+                <polyline points="17 21 17 13 7 13 7 21"></polyline>
+                <polyline points="7 3 7 8 15 8"></polyline>
+            </svg>
+            <span>Save</span>
+        </button>
+
+        <a href="https://maps.google.com/?q=Tanishq+Nx+Stationery+Runwal+Nagar+Thane+West" id="bar-directions"
+            class="bar-item" target="_blank" rel="noopener">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <span>Map</span>
+        </a>
+    </nav>
+
+    <!-- PRODUCT DETAILS MODAL -->
+    <div class="modal-overlay" id="product-modal" aria-hidden="true" role="dialog">
+        <div class="modal-card">
+            <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">&times;</button>
+            <div class="modal-image-wrapper">
+                <img src="" alt="" id="modal-image" class="modal-img">
+                <span class="modal-badge" id="modal-badge">DEMO PRODUCT</span>
+            </div>
+            <div class="modal-content">
+                <span class="modal-category" id="modal-category">STATIONERY</span>
+                <h3 class="modal-title" id="modal-title">Product Name</h3>
+                <p class="modal-price" id="modal-price">₹0.00</p>
+                <p class="modal-description" id="modal-description">Product details</p>
+
+                <div class="modal-actions">
+                    <a href="#" id="modal-whatsapp-btn" target="_blank" rel="noopener" class="primary-modal-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+                            </path>
+                        </svg>
+                        <span>ENQUIRE ON WHATSAPP</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FULLSCREEN LIGHTBOX MODAL -->
+    <div class="lightbox-overlay" id="lightbox-modal" aria-hidden="true">
+        <button class="lightbox-close" id="lightbox-close">&times;</button>
+        <button class="lightbox-nav lightbox-prev" id="lightbox-prev">&#10094;</button>
+        <button class="lightbox-nav lightbox-next" id="lightbox-next">&#10095;</button>
+        <div class="lightbox-container">
+            <img src="" alt="" id="lightbox-img" class="lightbox-image">
+            <div class="lightbox-caption">
+                <span id="lightbox-title">Photo Title</span>
+                <span id="lightbox-tag" class="photo-badge">REAL STORE PHOTO</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- TOAST NOTIFICATION CONTAINER -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <!-- VANILLA JAVASCRIPT -->
+    <script src="script.js"></script>
+</body>
+
+</html>
